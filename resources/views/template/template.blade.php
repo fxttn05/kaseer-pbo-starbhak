@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="/asset/template/css/vertical-layout-light/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="/asset/template/images/favicon.png" />
+
+  <title>Kaseer {{ $title }}</title>
 </head>
 <body>
   <div class="container-scroller">
