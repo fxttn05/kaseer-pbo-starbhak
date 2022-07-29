@@ -130,7 +130,10 @@
 
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Nama user</label>
-                            <input class="form-control" type="text" placeholder="{{ Auth::user()->name }}" aria-label="Disabled input example" disabled>
+                            {{-- @foreach($data as $item5) --}}
+                                <input class="form-control" name="user_id" type="text" placeholder="Fattan" aria-label="Disabled input example" disabled>
+                            {{-- @endforeach --}}
+                            
                         </div>
                         
     
