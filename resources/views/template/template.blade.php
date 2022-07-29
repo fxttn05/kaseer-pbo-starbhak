@@ -83,18 +83,7 @@
             </div>
           </li>
 
-          <li class="nav-item dropdown d-none d-lg-block user-dropdown">
-            <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="menu-icon mdi mdi-account-circle-outline"></i></a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-              <div class="dropdown-header text-center">
-                <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
-                <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p>
-              </div>
-              
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
-            </div>
-          </li>
+          
           
         </ul>
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
@@ -150,6 +139,14 @@
             <a class="nav-link" href="/user">
               <i class="menu-icon mdi mdi-account-circle-outline"></i>
               <span class="menu-title">User Pages</span>
+            </a>
+            
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/login">
+              <i class="menu-icon mdi mdi-account-circle-outline"></i>
+              <span class="menu-title">Logout</span>
             </a>
             
           </li>
