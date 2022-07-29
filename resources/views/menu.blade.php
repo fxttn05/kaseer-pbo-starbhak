@@ -25,7 +25,7 @@
             <div class="d-flex justify-content-around">
                 <div>
                     <h6>Stock</h6>
-                </div>
+                </div >
                 <div>
                     <p>{{ $item->qty }}</p>
                 </div>
