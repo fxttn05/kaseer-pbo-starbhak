@@ -3,15 +3,17 @@
 @section('container')
 <div class="container">
     <div class="judul">
-        <h1 class="text-center">Menu</h1>
         <a type="button" href="/tambahmenu" class="btn btn-success mt-5 mb-4 ">Tambah +</a>
     </div>
 
-    
-    <div class="d-flex justify-content-around">
+    <h3> Makanan </h3>
+    <div class="d-flex justify-content-start flex-row mb-3">
         @foreach ($data as $item)
-        <div class="card" style="width: 18rem;">
-            <img src="../public/ayamgeprek.jpg" class="card-img-top" alt="...">
+
+        
+        @if ($item->category == 'makanan')
+        <div class="card" style="width: 12rem;">
+            <img src="{{ asset('picture/'.$item->picture) }}" alt="" style="width: 12rem">
             <div class="card-body">
                 <h5 class="card-title">{{ $item->item }}</h5>
             </div>
@@ -33,8 +35,77 @@
             </div>
 
         </div>
+        @endif
         @endforeach
     </div>
+
+    <h3> Minuman </h3>
+    <div class="d-flex justify-content-start flex-row mb-3">
+        @foreach ($data as $item)
+
+        
+        @if ($item->category == 'minuman')
+        <div class="card" style="width: 12rem;">
+            <img src="{{ asset('picture/'.$item->picture) }}" alt="" style="width: 12rem">
+            <div class="card-body">
+                <h5 class="card-title">{{ $item->item }}</h5>
+            </div>
+            <div class="d-flex justify-content-around">
+                <div>
+                    <h6>Harga</h6>
+                </div>
+                <div>
+                    <p>{{ $item->price }}</p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-around">
+                <div>
+                    <h6>Stock</h6>
+                </div >
+                <div>
+                    <p>{{ $item->qty }}</p>
+                </div>
+            </div>
+
+        </div>
+        @endif
+        @endforeach 
+    </div>
+
+    <h3> Paketan </h3>
+    <div class="d-flex justify-content-start flex-row mb-3">
+        @foreach ($data as $item)
+        
+        @if ($item->category == 'paketan')
+        <div class="card" style="width: 12rem;">
+            <img src="{{ asset('picture/'.$item->picture) }}" alt="" style="width: 12rem">
+            <div class="card-body">
+                <h5 class="card-title">{{ $item->item }}</h5>
+            </div>
+            <div class="d-flex justify-content-around">
+                <div>
+                    <h6>Harga</h6>
+                </div>
+                <div>
+                    <p>{{ $item->price }}</p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-around">
+                <div>
+                    <h6>Stock</h6>
+                </div >
+                <div>
+                    <p>{{ $item->qty }}</p>
+                </div>
+            </div>
+
+        </div>
+        @endif
+        
+        @endforeach 
+    </div>
+
+        
 
     
 
