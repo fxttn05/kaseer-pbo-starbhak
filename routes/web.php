@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\TransaksiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +25,7 @@ Route::get('/home', function () {
 });
 
 Route::get('/menu', [MenuController::class, 'menu'])->name('menu');
+
+Route::get('/transaksi', [TransaksiController::class, 'transaksi'])->name('Transaksi');
+
+Route::get('/user', [UserController::class, 'user'])->name('User Page');

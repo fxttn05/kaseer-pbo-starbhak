@@ -7,8 +7,9 @@
         <a type="button" href="/tambahmenu" class="btn btn-success mt-5 mb-4 ">Tambah +</a>
     </div>
 
-    @foreach ($data as $item)
-    <div class="d-flex">
+    
+    <div class="d-flex justify-content-around">
+        @foreach ($data as $item)
         <div class="card" style="width: 18rem;">
             <img src="../public/ayamgeprek.jpg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -32,10 +33,10 @@
             </div>
 
         </div>
+        @endforeach
     </div>
 
-    @endforeach
+    
 
 </div>
-
 @endsection
