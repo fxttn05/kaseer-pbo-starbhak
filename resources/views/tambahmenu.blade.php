@@ -17,7 +17,7 @@
                 
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Pilih category menu</label>
-                    <select class="form-select" name="jammulai">
+                    <select class="form-select" name="category">
                         <option selected>Select Category</option>
                         <option value="1">Makanan</option>
                         <option value="2">Minuman</option>

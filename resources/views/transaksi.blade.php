@@ -3,7 +3,7 @@
 @section('container')
 <div class="container">
 
-    <div class="row">
+    <div class="d-flex">
         <div class="col-8">
             <h3> Makanan </h3>
             <div class="d-flex justify-content-start flex-row mb-3">
@@ -11,8 +11,8 @@
 
 
                 @if ($item->category == 'makanan')
-                <div class="card" style="width: 12rem;">
-                    <img src="{{ asset('picture/'.$item->picture) }}" alt="" style="width: 12rem">
+                <div class="card me-3" style="width: 12rem;">
+                    <img src="{{ asset('picture/'.$item->picture) }}" alt="" style="width: 12rem; height: 13rem">
                     <div class="card-body">
                         <h5 class="card-title">{{ $item->item }}</h5>
                     </div>
@@ -44,8 +44,8 @@
 
 
                 @if ($item2->category == 'minuman')
-                <div class="card" style="width: 12rem;">
-                    <img src="{{ asset('picture/'.$item2->picture) }}" alt="" style="width: 12rem">
+                <div class="card me-3" style="width: 12rem;">
+                    <img src="{{ asset('picture/'.$item2->picture) }}" alt="" style="width: 12rem; height: 13rem">
                     <div class="card-body">
                         <h5 class="card-title">{{ $item2->item }}</h5>
                     </div>
@@ -75,9 +75,9 @@
             <div class="d-flex justify-content-start flex-row mb-3">
                 @foreach ($data as $item3)
 
-                @if ($item3->category == 'paketan')
-                <div class="card" style="width: 12rem;">
-                    <img src="{{ asset('picture/'.$item3->picture) }}" alt="" style="width: 12rem">
+                @if ($item3->category == 'paket')
+                <div class="card me-3" style="width: 12rem;">
+                    <img src="{{ asset('picture/'.$item3->picture) }}" alt="" style="width: 12rem; height: 13rem">
                     <div class="card-body">
                         <h5 class="card-title">{{ $item3->item }}</h5>
                     </div>
@@ -105,9 +105,9 @@
             </div>
         </div>
 
-        <div class="col-4">
-            <div class="card">
-                <div class="card-body">
+        <div style="position:initial;">
+            <div class="card ">
+                <div class="card-body ">
                    <h3>Transaksi</h3>
                     <form method="POST" action="{{route('inserttransaksi')}}" enctype="multipart/form-data">
                         @csrf

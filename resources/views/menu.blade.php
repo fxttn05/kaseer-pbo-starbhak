@@ -12,8 +12,8 @@
 
         
         @if ($item->category == 'makanan')
-        <div class="card" style="width: 12rem;">
-            <img src="{{ asset('picture/'.$item->picture) }}" alt="" style="width: 12rem">
+        <div class="card me-3" style="width: 12rem;">
+            <img src="{{ asset('picture/'.$item->picture) }}" alt="" style="width: 12rem; height: 14rem">
             <div class="card-body">
                 <h5 class="card-title">{{ $item->item }}</h5>
             </div>
@@ -45,8 +45,8 @@
 
         
         @if ($item->category == 'minuman')
-        <div class="card" style="width: 12rem;">
-            <img src="{{ asset('picture/'.$item->picture) }}" alt="" style="width: 12rem">
+        <div class="card me-3" style="width: 12rem;">
+            <img src="{{ asset('picture/'.$item->picture) }}" alt="" style="width: 12rem; height: 14rem">
             <div class="card-body">
                 <h5 class="card-title">{{ $item->item }}</h5>
             </div>
@@ -76,9 +76,9 @@
     <div class="d-flex justify-content-start flex-row mb-3">
         @foreach ($data as $item)
         
-        @if ($item->category == 'paketan')
-        <div class="card" style="width: 12rem;">
-            <img src="{{ asset('picture/'.$item->picture) }}" alt="" style="width: 12rem">
+        @if ($item->category == 'paket')
+        <div class="card me-3" style="width: 12rem;">
+            <img src="{{ asset('picture/'.$item->picture) }}" alt="" style="width: 12rem; height: 14rem">
             <div class="card-body">
                 <h5 class="card-title">{{ $item->item }}</h5>
             </div>
