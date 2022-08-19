@@ -23,7 +23,7 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="/asset/template/images/favicon.png" />
 
-  <title>Kaseer {{ $title }}</title>
+  <title>Reesto {{ $title }}</title>
 </head>
 <body>
   <div class="container-scroller">
@@ -38,10 +38,10 @@
         </div>
         <div>
           <a class="navbar-brand brand-logo" href="index.html">
-            Kaseer
+            Reesto
           </a>
           <a class="navbar-brand brand-logo-mini" href="index.html">
-            K
+            R
           </a>
         </div>
       </div>
