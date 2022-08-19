@@ -20,8 +20,7 @@ return new class extends Migration
             $table->string('picture');
             $table->integer('category');
             $table->bigInteger('price');
-            $table->timestamp('created_at');
-            $table->timestamp('update_at');
+            $table->timestamps();
         });
     }
 

@@ -14,11 +14,7 @@ class Menu extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        'code_menu',
-        'nama_item',
-        'picture',
-        'category',
-        'price',
+    protected $guarded = [
+        'id',
     ];
 }
