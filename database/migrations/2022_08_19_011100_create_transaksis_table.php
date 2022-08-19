@@ -14,11 +14,17 @@ return new class extends Migration
     public function up()
     {
         Schema::create('transaksis', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('menu_id');
-            $table->integer('qty');
-            $table->foreignId('user_id');
-            $table->timestamps();
+            $table->increments('id');
+            $table->integer('no_order')->unique();
+            $table->integer('no_table');
+            $table->string('payment_method');
+            $table->string('name');
+            $table->bigInteger('pajak');
+            $table->integer('diskon');
+            $table->integer('total');
+            $table->string('nama _item');
+            $table->timestamp('created_at');
+            $table->timestamp('update_at');
         });
     }
 

@@ -14,13 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('menus', function (Blueprint $table) {
-            $table->id();
-            $table->string('item');
-            $table->enum('category', ['makanan', 'minuman', 'paket']);
+            $table->increments('id');
+            $table->string('code_menu');
+            $table->string('nama_item');
             $table->string('picture');
-            $table->integer('price');
-            $table->integer('qty');
-            $table->timestamps();
+            $table->integer('category');
+            $table->bigInteger('price');
+            $table->timestamp('created_at');
+            $table->timestamp('update_at');
         });
     }
 
