@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('code_menu');
             $table->string('nama_item');
             $table->string('picture');
-            $table->integer('category');
+            $table->foreignId('category_id');
             $table->bigInteger('price');
             $table->timestamps();
         });

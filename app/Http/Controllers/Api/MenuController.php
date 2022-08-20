@@ -14,7 +14,7 @@ class MenuController extends Controller
     public function index()
     {
         //get posts
-        $menus = Menu::latest()->paginate(5);
+        $menus = Menu::with('category')->get();
 
         //return collection of posts as a resource
         return new MenuResource(true, 'List Data Menu', $menus);
@@ -28,7 +28,7 @@ class MenuController extends Controller
             'code_menu'   => 'required', 
             'nama_item'   => 'required',
             'picture'     => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'category'   => 'required',
+            'category_id'   => 'required',
             'price'   => 'required',  
             
             
@@ -48,7 +48,7 @@ class MenuController extends Controller
             'picture'     => $picture->hashName(),
             'code_menu'     => $request->code_menu,
             'nama_item'   => $request->nama_item,
-            'category'   => $request->category,
+            'category_id'   => $request->category_id,
             'price'   => $request->price,
         ]);
         
@@ -71,7 +71,7 @@ class MenuController extends Controller
         $validator = Validator::make($request->all(), [
             'code_menu'   => 'required', 
             'nama_item'   => 'required',
-            'category'   => 'required',
+            'category_id'   => 'required',
             'price'   => 'required',
         ]);
 
@@ -95,7 +95,7 @@ class MenuController extends Controller
                 'picture'     => $picture->hashName(),
                 'code_menu'   => $request->code_menu,
                 'nama_item'   => $request->nama_item,
-                'category'    => $request->category,
+                'category_id'    => $request->category_id,
                 'price'       => $request->price,
             ]);
 
@@ -105,7 +105,7 @@ class MenuController extends Controller
             $menu->update([
                 'code_menu'   => $request->code_menu,
                 'nama_item'   => $request->nama_item,
-                'category'    => $request->category,
+                'category_id'    => $request->category_id,
                 'price'       => $request->price,
             ]);
         }
